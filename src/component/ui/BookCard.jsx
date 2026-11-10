@@ -1,6 +1,11 @@
+import { Link } from 'react-router';
+
 const BookCard = ({ book }) => {
   return (
-    <div className='card bg-white w-full rounded-2xl border border-gray-100 shadow-[0_0_18px_rgba(0,0,0,0.12)] hover:shadow-[0_0_24px_rgba(0,0,0,0.20)] hover:-translate-y-1 transition-all duration-300'>
+    <Link
+      to={`/bookDetails/${book.bookId}`}
+      className='card bg-white w-full rounded-2xl border border-gray-100 shadow-[0_0_18px_rgba(0,0,0,0.12)] hover:shadow-[0_0_24px_rgba(0,0,0,0.20)] hover:-translate-y-1 transition-all duration-300'
+    >
       {/* Book Image */}
       <figure className='p-5 bg-gray-50 rounded-t-2xl'>
         <img
@@ -45,7 +50,7 @@ const BookCard = ({ book }) => {
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

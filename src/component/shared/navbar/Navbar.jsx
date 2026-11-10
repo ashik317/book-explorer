@@ -8,7 +8,7 @@ const Navbar = () => {
           <NavLink
             to='/'
             className={({ isActive }) =>
-              `font-semibold  ${
+              `font-semibold ${
                 isActive
                   ? 'text-green-500 border border-green-500 bg-transparent'
                   : ''
@@ -21,9 +21,9 @@ const Navbar = () => {
 
         <li>
           <NavLink
-            to='/books'
+            to='/booklist'
             className={({ isActive }) =>
-              `font-semibold  ${
+              `font-semibold ${
                 isActive
                   ? 'text-green-500 border border-green-500 bg-transparent'
                   : ''
@@ -55,6 +55,7 @@ const Navbar = () => {
   return (
     <nav className='bg-base-100 shadow-sm'>
       <div className='navbar container mx-auto'>
+        {/* Navbar Start */}
         <div className='navbar-start'>
           <div className='dropdown'>
             <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
@@ -69,12 +70,15 @@ const Navbar = () => {
           <h2 className='text-[26px] font-black'>Book Vibe</h2>
         </div>
 
+        {/* Navbar Center */}
         <div className='navbar-center hidden lg:flex'>
           <ul className='menu menu-horizontal px-1'>{links()}</ul>
         </div>
 
-        <div className='navbar-end gap-2 '>
+        {/* Navbar End */}
+        <div className='navbar-end gap-2'>
           <button className='btn btn-info w-24'>SignUp</button>
+
           <button className='btn btn-success w-24'>SignIn</button>
         </div>
       </div>
